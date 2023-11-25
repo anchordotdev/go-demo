@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoDemo</title>
+  </head>
+  <body>
+    <h2>Hello from go-demo frontend</h2>
+        <p>
+        It is currently {{.Time}}
+        </p>
+        {{if .Configured}}
+        <p><br> 
+        <h3>Backend setup... </h3>
+        pinging <a href="{{.URL}}">{{.URL}}</a> <br>
+        response: <br>
+        {{.Message}}
+        </p>
+        {{else}}
+        <p><br><br> No backend service detected, to setup a backend service follow this example:<br> LINK </p>
+        {{end}}
+  </body>
+</html>
