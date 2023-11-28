@@ -66,6 +66,7 @@ func main() {
 	}
 
 	// Start the https server
+	fmt.Println("App available at >> https://" + os.Getenv("HOST") + os.Getenv("ADDR") + "/")
 	log.Fatal(srv.Serve(ln))
 }
 
