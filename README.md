@@ -9,4 +9,4 @@ The app has two endpoints:
 
 This app is referenced in the followling docs:
 
-* https://docs.anchor.dev/examples/app-go
+* https://anchor.dev/docs/examples/local-https/app-go
