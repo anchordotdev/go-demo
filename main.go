@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/tls"
 	"encoding/base64"
+	"errors"
 	"fmt"
 	"html/template"
 
@@ -121,7 +122,11 @@ func ping_backend(url string) string {
 		},
 	}
 
-	res, _ := client.Get(url)
+	res, err := client.Get(url)
+	if err != nil {
+		return fmt.Sprintf("backend request error: %q", errors.Unwrap(err))
+	}
+
 	body, _ := io.ReadAll(res.Body)
 	return string(body)
 }
