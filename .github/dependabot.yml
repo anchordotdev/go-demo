@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/"
+    groups:
+      development:
+        dependency-type: development
+    schedule:
+      interval: "monthly"
+    reviewers:
+      - "benburkert"
+      - "geemus"
