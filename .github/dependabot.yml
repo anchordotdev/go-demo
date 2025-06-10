@@ -7,6 +7,3 @@ updates:
         dependency-type: development
     schedule:
       interval: "monthly"
-    reviewers:
-      - "benburkert"
-      - "geemus"
